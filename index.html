@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./tailwindstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="./regularStyles.css">
+</head>
+<body class="min-h-screen flex items-center justify-center">
+
+    <!--mobile menu-->
+    <div id="mobile-menu" class="hidden absolute pb-3 top-24 z-10 left-[50%] justify-center gap-3 h-80 w-72 rounded-xl translate-x-[-50%] font-bold text-white flex-col items-center bg-blue-900 space-y-3">
+        <div>Features</div>
+        <div>Pricing</div>
+        <div>Ressources</div>
+        <div class="h-[2px] w-full bg-gray-900"></div>
+        <div>Login</div>
+        <div><a href="" class="z-10 px-8 py-3 bg-teal-500 rounded-full text-white font-bold">Sign up</a></div>
+
+    </div>
+
+    <main class="grid grid-cols-1 mt-10 max-w-[375px] overflow-hidden md:max-w-[1440px] md:px-24">
+        <div class="row-[1] bg-white pb-32"> <!--début row 1-->
+        <!--header-->
+        <div class="flex px-5 bg-white md:mb-8 md:hidden">
+            <div class="flex-1">
+                <img class="h-full w-auto object-cover" src="url-shortening-api-master/images/logo.svg" alt="logo">
+            </div>
+            <div id="open-mobile-menu" class="cursor-pointer md:hidden">
+                <img class="h-full" src="url-shortening-api-master/images/Hamburger_icon.svg.png" alt="hamburger">
+            </div>
+        </div>
+        <!--desk header-->
+        <div class="hidden md:flex px-5 bg-white md:mb-8 justify-between">
+            <div class="flex gap-6">
+                <img class="h-full w-auto object-cover mr-9" src="url-shortening-api-master/images/logo.svg" alt="logo">
+                <a href="">Features</a>
+                <a href="">Pricing</a>
+                <a href="">Ressources</a>
+            </div>
+            <div class="flex gap-6">
+                <a href="">Sign up</a>
+                <a href="">Login</a>
+            </div>
+        </div>
+        <!--image1-->
+        <div class="md:flex flex-row-reverse md:gap-10"> <!--flexbox-->
+        <div class="my-12 bg-white">
+            <img class="translate-x-24 scale-125 md:translate-x-[0px] md:scale-100 md:h-full md:object-cover" src="url-shortening-api-master/images/illustration-working.svg" alt="">
+        </div>
+        <!--anchor-->
+        <div class="flex flex-col gap-6 justify-center items-center px-5 text-center md:text-left bg-white md:gap-8">
+            <h1 class="font-bold text-4xl md:text-6xl">
+                More than just shorter links
+            </h1>
+            <p class=" text-slate-600 md:text-xl">
+                Build your brand's recognition and get detailed insights
+                 on how your links are performing
+            </p>
+            <a href="" class="z-10 px-8 py-3 bg-teal-500 rounded-full text-white font-bold md:text-center">Get started</a>
+        </div>
+        </div>
+        </div>
+        <div class="rox-[2] bg-[#F0F1F6]"> <!--début row 2-->
+        <!--link input-->
+        <div class="mx-5 mt-0 bg-blue-900 flex flex-col p-5  items-stretch gap-5 rounded-xl translate-y-[-50%] -mb-10">
+            <div class="h-10 rounded-xl overflow-hidden">
+                <input id="link-input" class="h-full w-full px-4" placeholder="Shorten a link here ..." type="text">
+            </div>
+            <p class="text-red-700 text-sm font-semibold -mt-4 hidden" id="invalid-link">Invalid link</p>
+            <div id="shorten-it" class="h-10 rounded-xl bg-teal-500 text-white flex items-center justify-center cursor-pointer">
+                Shorten it
+            </div>
+        </div>
+
+        <!--link historic-->
+        <div id="link-history" class="mb-10 flex flex-col-reverse max-h-[800px] overflow-y-auto">
+
+        </div>
+
+        <!--stats-->
+        <div class="flex flex-col gap-6 justify-center items-center px-5 text-center">
+            <h1 class="font-bold text-4xl">
+                Advanced statistics
+            </h1>
+            <p class=" text-slate-600">
+                Track how your links are performing across the web with our advanced statistcs dashboard
+            </p>
+        </div>
+
+        <!--stat cards-->
+        
+        <div class="grid grid-cols-1 mx-5 mt-20 gap-20 md:grid-cols-3 md:grid-rows-[360px]">
+            <!--card1-->
+            <div class="row-[1] col-[1] relative text-center px-7 pb-7 pt-16 bg-white rounded-xl md:row-[1] md:col-[1] md:self-start">
+                <div class="absolute p-5 rounded-full bg-blue-900 top-0 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                    <img src="url-shortening-api-master/images/icon-brand-recognition.svg" alt="brand recognition">
+                </div>
+                    <h1 class="mb-5 font-bold text-lg">Brand Recognition</h1>
+                <p>Boost your brand rocognition with each click. Generic links don't mean a thing.
+                    Branded links help instil confidence in your content.
+                </p>
+            </div>
+            <!--card2-->
+            <div class="row-[2] col-[1] relative text-center px-7 pb-7 pt-16 bg-white rounded-xl md:row-[1] md:col-[2] md:self-center">
+                <div class="absolute p-5 rounded-full bg-blue-900 top-0 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                    <img src="url-shortening-api-master/images/icon-detailed-records.svg" alt="brand recognition">
+                </div>
+                    <h1 class="mb-5 font-bold text-lg">Detailed Records</h1>
+                <p>Boost your brand rocognition with each click. Generic links don't mean a thing.
+                    Branded links help instil confidence in your content.
+                </p>
+            </div>
+            <!--card3-->
+            <div class="row-[3] col-[1] relative text-center px-7 pb-7 pt-16 bg-white rounded-xl md:row-[1] md:col-[3] md:self-end">
+                <div class="absolute p-5 rounded-full bg-blue-900 top-0 left-1/2 translate-x-[-50%] translate-y-[-50%]">
+                    <img src="url-shortening-api-master/images/icon-fully-customizable.svg" alt="brand recognition">
+                </div>
+                    <h1 class="mb-5 font-bold text-lg">Fully Customizable</h1>
+                <p>Boost your brand rocognition with each click. Generic links don't mean a thing.
+                    Branded links help instil confidence in your content.
+                </p>
+            </div>
+            <!--line-->
+            <div class="row-[1/4] col-[1] self-center justify-self-center w-2 h-4/6 bg-teal-500 md:col-[1/4] md:w-3/5 md:h-2 md:row-[1]"></div>
+        </div>
+        <!--end promo-->
+        <div class="relative bg-purple-950 flex flex-col items-center justify-center gap-5 mt-10 h-[300px]">
+            <h1 class="text-white font-bold text-2xl z-10">
+                Boost your links today
+            </h1>
+            <a href="" class="z-10 px-8 py-3 bg-teal-500 rounded-full text-white font-bold">Get started</a>
+            <img class="md:hidden absolute top-0 left-0" src="url-shortening-api-master/images/bg-boost-mobile.svg" alt="boost">
+            <img class="hidden md:block h-full object-cover absolute top-0 left-0" src="url-shortening-api-master/images/bg-boost-desktop.svg" alt="boost">
+        
+        </div>
+        <!--footer-->
+        <div class="bg-blue-950 flex flex-col items-center py-8 justify-center text-slate-300 -mt-5 gap-8 md:flex-row md:items-start md:py-20 md:px-8 md:justify-center">
+
+            <h1 class="font-bold text-2xl  text-white md:mr-28">
+                Shortly
+            </h1>
+            <div class="text-center space-y-3">
+                <h2 class="font-bold mb-4 text-white">Features</h2>
+                <a class="block" href="">Link shortening</a>
+                <a class="block" href="">Branded links</a>
+                <a class="block" href="">Analytics</a>
+            </div>
+
+            <div class="text-center space-y-3">
+                <h2 class="font-bold mb-4 text-white">Features</h2>
+                <a class="block" href="">Link shortening</a>
+                <a class="block" href="">Branded links</a>
+                <a class="block" href="">Analytics</a>
+            </div>
+
+            <div class="text-center space-y-3">
+                <h2 class="font-bold mb-4 text-white">Features</h2>
+                <a class="block" href="">Link shortening</a>
+                <a class="block" href="">Branded links</a>
+                <a class="block" href="">Analytics</a>
+            </div>
+
+            <!--reseaux sociaux-->
+        <div class="flex gap-6">
+            <img src="url-shortening-api-master/images/icon-facebook.svg" alt="facebook">
+            <img src="url-shortening-api-master/images/icon-twitter.svg" alt="twitter">
+            <img src="url-shortening-api-master/images/icon-pinterest.svg" alt="pinterest">
+            <img src="url-shortening-api-master/images/icon-instagram.svg" alt="instagram">
+
+        </div>
+
+        </div>
+        
+        </div>
+
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
